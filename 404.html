@@ -35,6 +35,7 @@
     main.error {
       min-height: calc(100vh - var(--nav-height));
       display: flex;
+      justify-content: center;
       align-items: center;
     }
 
@@ -45,6 +46,12 @@
     main.error .error-number text {
       font-family: monospace;
     }
+    .error-page > div > *{
+      text-align: center;
+    }
+    .error-page > div > svg{
+      margin-left: 40px;
+    }
   </style>
   <link rel="stylesheet" href="/styles/lazy-styles.css">
 </head>
@@ -52,7 +59,7 @@
 <body>
   <header></header>
   <main class="error">
-    <div class="section">
+    <div class="section error-page">
       <svg viewBox="1 0 38 18" class="error-number">
         <text x="0" y="17">404</text>
       </svg>
