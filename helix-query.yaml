@@ -1,8 +1,8 @@
 version: 1
 indices:
-  enrichment:
+  site:
     include:
-      - **/
+      - '**'
     target: /query-index.json
     properties:
       author:
@@ -13,8 +13,8 @@ indices:
         select: head > meta[property="og:title"]
         value: |
           attribute(el, 'content')
-      description:  
-        select: head > meta[property="og:description"]
+      Main-title:
+        select: head > meta[property="og:title"]
         value: |
           attribute(el, 'content')
       image:    
@@ -22,6 +22,6 @@ indices:
         value: |
           attribute(el, 'content')
       description:    
-        select: head > meta[property="og:description"]
+        select: head > meta[name="description"]
         value: |
           attribute(el, 'content')
